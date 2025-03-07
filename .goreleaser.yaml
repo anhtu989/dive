@@ -1,6 +1,7 @@
+yaml
 release:
   # If set to auto, will mark the release as not ready for production in case there is an indicator for this in the
-  # tag e.g. v1.0.0-rc1 .If set to true, will mark the release as not ready for production.
+  # tag e.g. v1.0.0-rc1. If set to true, will mark the release as not ready for production.
   prerelease: auto
 
   # If set to true, will not auto-publish the release. This is done to allow us to review the changelog before publishing.
@@ -17,7 +18,7 @@ builds:
     goarch:
       - amd64
       - arm64
-    ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.buildTime={{.Date}}`.
+    ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.buildTime={{.Date}}
 
 brews:
   - repository:
@@ -43,8 +44,7 @@ nfpms:
       - deb
 
 dockers:
-  -
-    ids:
+  - ids:
       - dive
     dockerfile: Dockerfile
     # todo: on 1.0 remove 'v' prefix
