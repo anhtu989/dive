@@ -1,3 +1,4 @@
+yaml
 permit:
   - BSD.*
   - MIT.*
@@ -10,3 +11,9 @@ ignore-packages:
   # crypto/internal/boring is released under the openSSL license as a part of the Golang Standard Library
   - crypto/internal/boring
 
+# Add any additional ignored packages or licenses here
+# Example:
+# - some/other/package
+# - another/package
+
+# Ensure that all permitted licenses are correctly specified and that ignored packages are properly documented.
